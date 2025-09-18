@@ -21,7 +21,28 @@ import {
   Heart,
   TrendingUp,
   Building,
+  Bot,
+  Globe,
+  Mic,
+  FileText,
+  Search,
+  Bell,
+  Lock,
+  Palette,
+  BarChart3,
+  MessageCircle,
+  Headphones,
+  Database,
+  Workflow,
+  GitBranch,
+  Camera,
+  Share2,
+  Filter,
+  Tag,
+  Archive,
+  ScreenShare,
 } from "lucide-react";
+
 const ChatModulePage = ({ onNavigate }) => {
   const [activeUseCase, setActiveUseCase] = useState("ecommerce");
   const router = useRouter();
@@ -31,155 +52,219 @@ const ChatModulePage = ({ onNavigate }) => {
       title: "E-commerce Chat",
       icon: <ShoppingCart className="w-6 h-6" />,
       description:
-        "Turn browsers into buyers with intelligent shopping assistance",
+        "Turn browsers into buyers with AI-powered shopping assistance that understands context and intent",
       features: [
         {
-          icon: <Zap className="w-8 h-8 text-blue-500" />,
-          title: "Smart Product Recommendations",
+          icon: <Bot className="w-8 h-8 text-blue-500" />,
+          title: "AI Shopping Assistant",
           description:
-            "AI suggests products based on chat context and browsing behavior, increasing average order value by 35%.",
+            "GPT-4 powered chatbot that understands product catalogs, suggests alternatives, and handles complex queries like 'find me a red dress under $100 for a wedding'.",
         },
         {
           icon: <Video className="w-8 h-8 text-green-500" />,
           title: "Live Product Demos",
           description:
-            "Show products in action with screen sharing and video calls, reducing return rates by 60%.",
+            "One-click screen sharing lets sales reps showcase products in real-time, with recording capabilities for later review and training.",
         },
         {
-          icon: <Users className="w-8 h-8 text-purple-500" />,
-          title: "Cart Recovery Chat",
+          icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
+          title: "Smart Cart Recovery",
           description:
-            "Proactive messages to abandoned carts with personalized offers, recovering 23% of lost sales.",
+            "Behavioral triggers send personalized offers to abandoned carts, with A/B tested messaging that adapts to customer segments and purchase history.",
         },
         {
-          icon: <Clock className="w-8 h-8 text-orange-500" />,
-          title: "Order Status Updates",
+          icon: <BarChart3 className="w-8 h-8 text-orange-500" />,
+          title: "Conversion Analytics",
           description:
-            "Real-time shipping updates and support directly in chat, reducing support tickets by 40%.",
+            "Track chat-to-purchase rates, identify high-value conversations, and optimize agent performance with detailed conversation analytics and revenue attribution.",
         },
       ],
     },
     enterprise: {
       title: "Enterprise Chat",
       icon: <Building className="w-6 h-6" />,
-      description: "Scale team communication across departments and time zones",
+      description:
+        "Scale secure communication across global teams with enterprise-grade features and compliance",
       features: [
         {
           icon: <Shield className="w-8 h-8 text-blue-500" />,
-          title: "Enterprise Security",
+          title: "Zero-Trust Security",
           description:
-            "SOC 2 Type II compliance with end-to-end encryption and enterprise SSO integration.",
+            "SOC 2 Type II + ISO 27001 certified with end-to-end encryption, SSO integration, and granular permission controls that scale from teams to enterprise.",
         },
         {
-          icon: <Users className="w-8 h-8 text-green-500" />,
-          title: "Department Channels",
+          icon: <Workflow className="w-8 h-8 text-green-500" />,
+          title: "Workflow Automation",
           description:
-            "Organize conversations by project, team, or location with advanced permission controls.",
+            "Custom bots handle routine tasks, route messages based on content analysis, and integrate with 200+ enterprise tools including Salesforce, Jira, and ServiceNow.",
         },
         {
-          icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
-          title: "Analytics Dashboard",
+          icon: <Database className="w-8 h-8 text-purple-500" />,
+          title: "Compliance & Archiving",
           description:
-            "Track team communication patterns, response times, and collaboration effectiveness.",
+            "Automatic message retention, eDiscovery support, and regulatory compliance for GDPR, HIPAA, and financial services with searchable archives.",
         },
         {
-          icon: <Zap className="w-8 h-8 text-orange-500" />,
-          title: "Workflow Integration",
+          icon: <BarChart3 className="w-8 h-8 text-orange-500" />,
+          title: "Team Intelligence",
           description:
-            "Connect with Slack, Teams, Salesforce, and 100+ business tools for seamless workflows.",
+            "AI-powered insights identify communication bottlenecks, measure team collaboration health, and suggest workflow optimizations based on message patterns.",
         },
       ],
     },
     developers: {
       title: "Developer Chat",
       icon: <Code className="w-6 h-6" />,
-      description: "Embed powerful chat directly into your application",
+      description:
+        "White-label chat infrastructure that scales from prototype to millions of users with zero DevOps overhead",
       features: [
         {
-          icon: <Code className="w-8 h-8 text-blue-500" />,
-          title: "5-Minute Integration",
+          icon: <GitBranch className="w-8 h-8 text-blue-500" />,
+          title: "SDK & Components",
           description:
-            "Drop-in React components and REST APIs get you live in minutes, not months of development.",
+            "React, Vue, Angular components plus REST/GraphQL APIs. Full TypeScript support with real-time webhooks and 99.9% uptime SLA.",
         },
         {
-          icon: <Shield className="w-8 h-8 text-green-500" />,
-          title: "White-Label Ready",
+          icon: <Palette className="w-8 h-8 text-green-500" />,
+          title: "Complete Customization",
           description:
-            "Fully customizable UI that matches your brand with CSS variables and theme overrides.",
+            "CSS-in-JS theming, custom emoji sets, branded notifications, and white-label domain hosting. Make it look exactly like your app.",
         },
         {
-          icon: <Zap className="w-8 h-8 text-purple-500" />,
-          title: "Realtime Webhooks",
+          icon: <Database className="w-8 h-8 text-purple-500" />,
+          title: "Scalable Architecture",
           description:
-            "Sync chat events with your database and trigger custom workflows in real-time.",
+            "Auto-scaling WebSocket infrastructure handles 10M+ concurrent connections. Built on Kubernetes with global CDN and edge caching.",
         },
         {
-          icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
-          title: "Scalable Infrastructure",
+          icon: <Bot className="w-8 h-8 text-orange-500" />,
+          title: "AI-First Platform",
           description:
-            "Auto-scaling architecture handles everything from MVP to millions of concurrent users.",
+            "Built-in sentiment analysis, auto-moderation, smart routing, and custom AI integrations. Train models on your conversation data.",
         },
       ],
     },
     healthcare: {
       title: "Healthcare Chat",
       icon: <Heart className="w-6 h-6" />,
-      description: "HIPAA-compliant communication for patient care",
+      description:
+        "HIPAA-compliant patient communication with clinical workflow integration and care team coordination",
       features: [
         {
           icon: <Shield className="w-8 h-8 text-blue-500" />,
-          title: "HIPAA Compliance",
+          title: "HIPAA-First Design",
           description:
-            "Full HIPAA compliance with encrypted messaging, audit logs, and secure file sharing.",
+            "Built from the ground up for healthcare with BAA agreements, encrypted PHI handling, audit trails, and role-based access controls for care teams.",
         },
         {
           icon: <Calendar className="w-8 h-8 text-green-500" />,
-          title: "Appointment Integration",
+          title: "Clinical Integration",
           description:
-            "Seamlessly connect with scheduling systems for pre and post-appointment communication.",
+            "Direct EHR integration with Epic, Cerner, and Allscripts. Appointment scheduling, prescription refills, and lab results sharing in secure chat.",
         },
         {
-          icon: <Users className="w-8 h-8 text-purple-500" />,
-          title: "Care Team Coordination",
+          icon: <Headphones className="w-8 h-8 text-purple-500" />,
+          title: "Telehealth Ready",
           description:
-            "Secure group chats between doctors, nurses, and specialists for coordinated patient care.",
+            "HIPAA-compliant video calls, screen sharing for medical images, and secure file transfer with automatic PHI detection and encryption.",
         },
         {
-          icon: <Clock className="w-8 h-8 text-orange-500" />,
-          title: "Prescription & Records",
+          icon: <Bot className="w-8 h-8 text-orange-500" />,
+          title: "Clinical AI Assistant",
           description:
-            "Share prescriptions and medical records securely with automatic encryption and access controls.",
+            "AI triage helps prioritize urgent messages, suggests clinical protocols, and provides decision support while maintaining full clinician oversight.",
         },
       ],
     },
   };
-  const roadmapFeatures = [
+  const nearTermFeatures = [
     {
-      icon: <Sparkles className="w-6 h-6 text-blue-500" />,
-      title: "Voice messages with transcription",
-      description: "Send quick voice notes, auto-transcribed into text.",
+      icon: <Video className="w-5 h-5 text-blue-500" />,
+      title: "Basic Video & Audio Calls",
+      description:
+        "One-to-one and group video/audio calls with stable connections and mute/unmute controls",
+      eta: "Q4 2025",
     },
     {
-      icon: <Users className="w-6 h-6 text-green-500" />,
-      title: "Group threads",
-      description: "Break conversations into smaller, focused discussions.",
+      icon: <Users className="w-5 h-5 text-green-500" />,
+      title: "User Authentication & Profiles",
+      description:
+        "Secure sign-up, login, and user profiles to manage contacts and settings",
+      eta: "Q4 2025",
     },
     {
-      icon: <Code className="w-6 h-6 text-purple-500" />,
-      title: "API-first integrations",
-      description: "Easily connect chat with CRMs, ERPs, and custom workflows.",
+      icon: <MessageSquare className="w-5 h-5 text-purple-500" />,
+      title: "Text Chat with Emojis",
+      description: "Send messages alongside video calls with emoji reactions",
+      eta: "Q1 2026",
+    },
+    {
+      icon: <ScreenShare className="w-5 h-5 text-orange-500" />,
+      title: "Screen Sharing",
+      description:
+        "Share your screen during calls for presentations or collaborative work",
+      eta: "Q1 2026",
+    },
+    {
+      icon: <Calendar className="w-5 h-5 text-teal-500" />,
+      title: "Basic Scheduling",
+      description:
+        "Schedule video calls and send calendar invites to participants",
+      eta: "Q2 2026",
+    },
+    {
+      icon: <Shield className="w-5 h-5 text-red-500" />,
+      title: "End-to-End Encryption",
+      description:
+        "Ensure that calls and chats are encrypted for security and privacy",
+      eta: "Q2 2026",
+    },
+  ];
+
+  const futureFeatures = [
+    {
+      icon: <Camera className="w-5 h-5 text-indigo-500" />,
+      title: "AR/VR Integration",
+      description:
+        "Immersive chat experiences with spatial audio and 3D avatars",
+      category: "Innovation",
+    },
+    {
+      icon: <Database className="w-5 h-5 text-cyan-500" />,
+      title: "Blockchain Verification",
+      description:
+        "Cryptographic message verification and decentralized identity",
+      category: "Security",
+    },
+    {
+      icon: <Share2 className="w-5 h-5 text-pink-500" />,
+      title: "Social Media Integration",
+      description: "Unified inbox for Instagram, Twitter, LinkedIn, and SMS",
+      category: "Integration",
+    },
+    {
+      icon: <Filter className="w-5 h-5 text-yellow-500" />,
+      title: "Smart Content Filtering",
+      description:
+        "AI-powered spam detection and content moderation with custom rules",
+      category: "AI",
+    },
+    {
+      icon: <Tag className="w-5 h-5 text-emerald-500" />,
+      title: "Dynamic Message Tagging",
+      description: "Automatic categorization and smart folder organization",
+      category: "Organization",
+    },
+    {
+      icon: <Archive className="w-5 h-5 text-slate-500" />,
+      title: "Advanced Analytics Suite",
+      description:
+        "Predictive engagement metrics and conversation trend analysis",
+      category: "Analytics",
     },
   ];
 
   const features = chatUseCases[activeUseCase].features;
-
-  const upcomingFeatures = [
-    "Voice messages with transcription",
-    "File sharing with preview",
-    "Message reactions and threads",
-    "Custom chat backgrounds",
-    "Advanced search across all chats",
-  ];
 
   return (
     <div>
@@ -191,19 +276,19 @@ const ChatModulePage = ({ onNavigate }) => {
             <div>
               <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
                 <MessageSquare className="w-4 h-4" />
-                <span>Chat Module - Adapts to Any Industry</span>
+                <span>Chat Module - Industry-Specific Intelligence</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                One Chat Module,
+                One Chat Engine,
                 <span className="bg-gradient-to-r from-blue-600 via-gray-700 to-purple-600 bg-clip-text text-transparent">
                   {" "}
-                  Endless Possibilities
+                  Infinite Adaptations
                 </span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Whether you're selling products, managing teams, or caring for
-                patients – the same powerful chat engine adapts to your unique
-                workflow and delivers exactly what you need.
+                From AI shopping assistants to HIPAA-compliant patient care –
+                the same powerful infrastructure automatically configures itself
+                for your industry's unique needs and compliance requirements.
               </p>
 
               {/* Industry Selector */}
@@ -236,15 +321,54 @@ const ChatModulePage = ({ onNavigate }) => {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
                   onClick={() => onNavigate("concept")}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
-                  View All Modules
+                  <span>Explore All Modules</span>
+                  <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
             </div>
             <div className="relative">
               <div className="bg-white rounded-3xl shadow-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform duration-300">
-                
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg">
+                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                      <MessageSquare className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm font-medium text-gray-900">
+                        AI Assistant
+                      </div>
+                      <div className="text-xs text-gray-500">
+                        How can I help you today?
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 bg-green-50 rounded-lg">
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <Users className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm font-medium text-gray-900">
+                        Team Channel
+                      </div>
+                      <div className="text-xs text-gray-500">
+                        3 new messages
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3 p-4 bg-purple-50 rounded-lg">
+                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                      <Video className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm font-medium text-gray-900">
+                        Video Call
+                      </div>
+                      <div className="text-xs text-gray-500">Join meeting</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -259,9 +383,8 @@ const ChatModulePage = ({ onNavigate }) => {
               {chatUseCases[activeUseCase].title} Superpowers
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              The same chat engine, optimized for{" "}
-              {chatUseCases[activeUseCase].title.toLowerCase()} workflows and
-              enhanced with industry-specific intelligence.
+              Industry-specific AI intelligence built into the same reliable
+              chat infrastructure that powers millions of conversations daily.
             </p>
           </div>
 
@@ -305,15 +428,115 @@ const ChatModulePage = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Mockup Section */}
+      {/* Enhanced Roadmap Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Designed for Every Device
+              The Future of Chat is Here
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We're pushing the boundaries of what's possible in conversational
+              experiences. Here's what's coming next.
+            </p>
+          </div>
+
+          {/* Near-term Features */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Coming Soon
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {nearTermFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 p-3 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg">
+                      {feature.icon}
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-bold text-gray-900">
+                          {feature.title}
+                        </h4>
+                        <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full font-medium">
+                          {feature.eta}
+                        </span>
+                      </div>
+                      <p className="text-gray-600 text-sm">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Future Vision */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Future Vision
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {futureFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="p-3 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      {feature.icon}
+                    </div>
+                    <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full font-medium">
+                      {feature.category}
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">
+                    {feature.title}
+                  </h4>
+                  <p className="text-gray-600 text-sm">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Early Access CTA */}
+          <div className="mt-16 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-100">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Shape the Future with Us
+              </h3>
+              <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                Join our beta program to get early access to new features,
+                provide feedback, and help us build the next generation of
+                conversational experiences.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+                  Join Beta Program
+                </button>
+                <button className="border border-blue-200 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200">
+                  Request Feature
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mockup Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Works Everywhere You Do
             </h2>
             <p className="text-xl text-gray-600">
-              Seamless experience whether you're on desktop, tablet, or mobile
+              Native performance across all devices with offline sync and smart
+              caching
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -321,26 +544,29 @@ const ChatModulePage = ({ onNavigate }) => {
             <div className="text-center">
               <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200">
                 <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-12 mb-6">
+                  <Monitor className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-gray-600 mb-2">
-                    Desktop Experience
+                    Desktop Powerhouse
                   </h3>
                   <p className="text-gray-500 text-sm">
-                    Full-screen chat with keyboard shortcuts
+                    Full keyboard shortcuts and multi-window support
                   </p>
                 </div>
-                <div className="space-y-2 flex flex-col items-center">
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span>Multi-window support</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span>Drag & drop files</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span>Rich text formatting</span>
-                  </div>
+                <div className="space-y-2">
+                  {[
+                    "Multi-window conversations",
+                    "Drag & drop file sharing",
+                    "Rich text formatting",
+                    "Screen sharing & recording",
+                  ].map((feature, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-center space-x-2 text-sm text-gray-500"
+                    >
+                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -349,70 +575,30 @@ const ChatModulePage = ({ onNavigate }) => {
             <div className="text-center">
               <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200">
                 <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-12 mb-6">
+                  <Smartphone className="w-16 h-16 text-blue-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-gray-600 mb-2">
-                    Mobile Optimized
+                    Mobile First
                   </h3>
                   <p className="text-gray-500 text-sm">
-                    Native app performance in the browser
+                    Native app performance in your browser
                   </p>
                 </div>
-                <div className="space-y-2 flex flex-col items-center">
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span>Offline message sync</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span>Smart notifications</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span>Voice message support</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Roadmap Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What's Coming to Chat
-            </h2>
-            <p className="text-xl text-gray-600">
-              We're constantly improving based on your feedback
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-100">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">
-                  Coming Soon
-                </h3>
-                <div className="space-y-4">
-                  {upcomingFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <Calendar className="w-5 h-5 text-blue-500" />
-                      <span className="text-gray-700">{feature}</span>
+                <div className="space-y-2">
+                  {[
+                    "Offline message sync",
+                    "Smart push notifications",
+                    "Voice message support",
+                    "Biometric security",
+                  ].map((feature, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-center space-x-2 text-sm text-gray-500"
+                    >
+                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <span>{feature}</span>
                     </div>
                   ))}
                 </div>
-              </div>
-              <div className="bg-white rounded-xl p-6 border border-blue-200">
-                <h4 className="font-bold text-gray-900 mb-4">
-                  Get Updates First
-                </h4>
-                <p className="text-gray-600 mb-6">
-                  Join our early access program and help shape the future of
-                  chat.
-                </p>
-                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
-                  Join Early Access
-                </button>
               </div>
             </div>
           </div>
@@ -426,29 +612,30 @@ const ChatModulePage = ({ onNavigate }) => {
             Ready to Transform Your Communication?
           </h2>
           <p className="text-xl opacity-90 mb-8">
-            Join thousands who've already discovered the joy of effortless
-            messaging.
+            Join thousands who've already discovered the joy of effortless,
+            intelligent messaging.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <button
-              onClick={() => router.push("/#concept-section")}
-              className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              onClick={() => onNavigate("concept")}
+              className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
             >
-              View Pricing
+              <span>View All Modules</span>
+              <ArrowRight className="w-5 h-5" />
             </button>
           </div>
           <div className="text-center">
-            <div className="inline-flex items-center space-x-6 text-sm opacity-80">
+            <div className="flex flex-wrap justify-center items-center gap-6 text-sm opacity-80">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4" />
+                <CheckCircle className="w-4 h-4 flex-shrink-0" />
                 <span>14-day money-back guarantee</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4" />
+                <CheckCircle className="w-4 h-4 flex-shrink-0" />
                 <span>No setup fees</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4" />
+                <CheckCircle className="w-4 h-4 flex-shrink-0" />
                 <span>Cancel anytime</span>
               </div>
             </div>
