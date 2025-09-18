@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 
 const UseCaseTabs = () => {
-    const [activeTab, setActiveTab] = useState('ecommerce');
+    const [activeTab, setActiveTab] = useState<keyof typeof useCases>('ecommerce');
   
     const useCases = {
       ecommerce: {
@@ -75,13 +75,13 @@ const UseCaseTabs = () => {
       }
     };
   
-    const tabKeys = Object.keys(useCases);
+    const tabKeys = Object.keys(useCases) as Array<keyof typeof useCases>;
   
     return (
       <div>
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {tabKeys.map((key) => (
+          {tabKeys.map((key: keyof typeof useCases) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}

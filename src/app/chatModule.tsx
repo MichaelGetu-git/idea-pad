@@ -45,7 +45,8 @@ import {
 
 // @ts-ignore
 const ChatModulePage = ({ onNavigate }) => {
-  const [activeUseCase, setActiveUseCase] = useState("ecommerce");
+  type ChatUseCaseKey = keyof typeof chatUseCases;
+  const [activeUseCase, setActiveUseCase] = useState<ChatUseCaseKey>("ecommerce");
   const router = useRouter();
 
   const chatUseCases = {
@@ -264,8 +265,7 @@ const ChatModulePage = ({ onNavigate }) => {
       category: "Analytics",
     },
   ];
-
-  const features = chatUseCases[activeUseCase].features;
+  const features = chatUseCases[activeUseCase]?.features;
 
   return (
     <div>
@@ -297,7 +297,7 @@ const ChatModulePage = ({ onNavigate }) => {
                 {Object.entries(chatUseCases).map(([key, useCase]) => (
                   <button
                     key={key}
-                    onClick={() => setActiveUseCase(key)}
+                    onClick={() => setActiveUseCase(key as ChatUseCaseKey)}
                     className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                       activeUseCase === key
                         ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
@@ -394,7 +394,7 @@ const ChatModulePage = ({ onNavigate }) => {
             {Object.entries(chatUseCases).map(([key, useCase]) => (
               <button
                 key={key}
-                onClick={() => setActiveUseCase(key)}
+                onClick={() => setActiveUseCase(key as ChatUseCaseKey)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   activeUseCase === key
                     ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"

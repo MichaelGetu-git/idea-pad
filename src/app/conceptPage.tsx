@@ -49,7 +49,7 @@ import UseCaseTabs from "./useCase";
 
 // @ts-ignore
 const ConceptPage = ({ onNavigate }) => {
-  const [selectedModule, setSelectedModule] = useState(null);
+  const [selectedModule, setSelectedModule] = useState<Module | null>(null);
 
   const modules = [
     {
@@ -291,13 +291,40 @@ const ConceptPage = ({ onNavigate }) => {
     },
   ];
 
-  const getStatusColor = (status) => {
+interface Module {
+    emoji: string;
+    title: string;
+    tagline: string;
+    description: string;
+    features: string[];
+    status: string;
+    color: string;
+}
+
+interface RoadmapItem {
+    quarter: string;
+    title: string;
+    description: string;
+    status: string;
+    features: string[];
+}
+
+interface PricingTier {
+    name: string;
+    price: number;
+    originalPrice: number;
+    description: string;
+    features: string[];
+    highlighted: boolean;
+}
+
+const getStatusColor = (status: string): string => {
     if (status === "Available") return "bg-green-100 text-green-800";
     if (status.includes("Q")) return "bg-blue-100 text-blue-800";
     return "bg-gray-100 text-gray-600";
-  };
+};
 
-  const ModuleModal = ({ module, onClose }) => (
+  const ModuleModal = ({ module, onClose }: { module: Module; onClose: () => void }) => (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <div className="p-8">
