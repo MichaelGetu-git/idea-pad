@@ -253,6 +253,7 @@ const ConceptPage = ({ onNavigate }) => {
         "Up to 50 users",
         "5GB file storage",
         "Basic analytics",
+        "weekly Update",
         "Email support",
       ],
       highlighted: false,
@@ -291,7 +292,7 @@ const ConceptPage = ({ onNavigate }) => {
     },
   ];
 
-interface Module {
+  interface Module {
     emoji: string;
     title: string;
     tagline: string;
@@ -299,32 +300,38 @@ interface Module {
     features: string[];
     status: string;
     color: string;
-}
+  }
 
-interface RoadmapItem {
+  interface RoadmapItem {
     quarter: string;
     title: string;
     description: string;
     status: string;
     features: string[];
-}
+  }
 
-interface PricingTier {
+  interface PricingTier {
     name: string;
     price: number;
     originalPrice: number;
     description: string;
     features: string[];
     highlighted: boolean;
-}
+  }
 
-const getStatusColor = (status: string): string => {
+  const getStatusColor = (status: string): string => {
     if (status === "Available") return "bg-green-100 text-green-800";
     if (status.includes("Q")) return "bg-blue-100 text-blue-800";
     return "bg-gray-100 text-gray-600";
-};
+  };
 
-  const ModuleModal = ({ module, onClose }: { module: Module; onClose: () => void }) => (
+  const ModuleModal = ({
+    module,
+    onClose,
+  }: {
+    module: Module;
+    onClose: () => void;
+  }) => (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <div className="p-8">
@@ -443,7 +450,7 @@ const getStatusColor = (status: string): string => {
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-4 h-4 text-green-500" />
-              <span>SOC 2 certified</span>
+              <span>Weekly Update</span>
             </div>
           </div>
         </div>
