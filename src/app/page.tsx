@@ -43,6 +43,10 @@ import {
   Settings,
   Cpu,
   Cloud,
+  View,
+  ViewIcon,
+  Watch,
+  VideoIcon,
 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -276,7 +280,7 @@ const ConceptPage = () => {
             <span>Built by Former FAANG Developers • 500,000+ Downloads</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent leading-tight mb-6">
-            Dope Chat
+            Dope <span className="text-purple-600">Chat</span>
             <br />
             <span className="text-4xl md:text-6xl">
               Production-Ready Communication
@@ -290,11 +294,18 @@ const ConceptPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button
               onClick={() => setCurrentPage("chat")}
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+              className="bg-gradient-to-r from-purple-600 to-purple-900 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
             >
               <MessageSquare className="w-5 h-5" />
               <Link href={"/chat"}>Explore Dope Chat</Link>
               <ArrowRight className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => setCurrentPage("#")}
+              className="border text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+            >
+              <VideoIcon className="w-5 h-5" />
+              <Link href={"#demo"}>See It In Action</Link>
             </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
@@ -446,7 +457,7 @@ const ConceptPage = () => {
       <div className="border-t items-center mx-4 md:mx-20 border-purple-600"></div>
 
       {/* App Showcase Section */}
-      <section className="py-20 bg-black">
+      <section id="demo" className="py-20 bg-black">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
