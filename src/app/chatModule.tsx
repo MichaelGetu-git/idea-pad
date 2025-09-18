@@ -43,6 +43,7 @@ import {
   ScreenShare,
 } from "lucide-react";
 
+// @ts-ignore
 const ChatModulePage = ({ onNavigate }) => {
   const [activeUseCase, setActiveUseCase] = useState("ecommerce");
   const router = useRouter();

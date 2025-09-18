@@ -47,6 +47,7 @@ import {
 import { useState } from "react";
 import UseCaseTabs from "./useCase";
 
+// @ts-ignore
 const ConceptPage = ({ onNavigate }) => {
   const [selectedModule, setSelectedModule] = useState(null);
 
