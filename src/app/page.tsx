@@ -273,7 +273,7 @@ const ConceptPage = () => {
     <div className="text-white bg-black">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
+        <div className="absolute inset-0"></div>
         <div className="relative max-w-6xl mx-auto px-6 text-center">
           <div className="inline-flex items-center space-x-2 bg-purple-900/50 border border-purple-500/30 text-purple-200 px-4 py-2 rounded-full text-sm font-medium mb-8">
             <Sparkles className="w-4 h-4" />
