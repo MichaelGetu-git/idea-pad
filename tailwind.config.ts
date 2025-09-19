@@ -1,7 +1,14 @@
-import type { Config } from "tailwindcss";
-
+// tailwind.config.ts
 export default {
-    content: [
+  content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-} satisfies Config;
+  theme: {
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+      serif: ['"Times New Roman"', 'Times', 'serif'],
+    },
+  },
+  plugins: [],
+}

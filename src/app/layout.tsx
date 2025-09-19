@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import NavBar from "./Navbar";
 import Footer from "./Footer";
+import Script from "next/script";
+import PaddleScript from "./PaddleScript";
+
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "700", "900"], // choose weights you need
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +36,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={inter.className}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`antialiased`}>
+        <PaddleScript />
         <NavBar />
         {children}
         <Footer />

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 const NavBar = () => (
-  <nav className="bg-gray-950/20 backdrop-blur-lg border-b border-gray-700/50 sticky top-0 z-50">
+  <nav className="bg-[#170e2b] backdrop-blur-lg border-b border-gray-700/50 shadow shadow-xl sticky top-0 z-50">
     <div className="max-w-7xl mx-auto px-6 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
