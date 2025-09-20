@@ -131,7 +131,7 @@ const VideoChat = () => {
   };
 
   return (
-    <div className="bg-[#0a0a16] text-white pt-2 font-serif">
+    <div className="text-white bg-[#0a0a16] font-segoe pt-2">
       {/* Hero Section */}
       <div className="relative min-h-screen overflow-hidden">
         <div
@@ -140,8 +140,8 @@ const VideoChat = () => {
             clipPath: "polygon(38% 0%, 62% 0%, 97% 100%, 3% 100%)",
           }}
         />
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-18 pt-14 md:pt-22 text-center">
-          <div className="mb-8">
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-18 pt-3 md:pt-3 text-center">
+          <div className="mb-5">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-400/30 backdrop-blur-sm">
               <span className="flex items-center justify-between text-purple-200 text-sm font-medium">
                 <VideoIcon className="w-7 h-7 pr-2" /> Premium Video Chat Source
@@ -149,16 +149,16 @@ const VideoChat = () => {
               </span>
             </div>
           </div>
-          <div className="max-w-5xl mx-auto mb-8">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4">
+          <div className="max-w-5xl mx-auto mb-5">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white tracking-tight mb-4">
               Professional Video Chat App
             </h1>
-            <div className="text-4xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-700 via-purple-600 to-purple-700 bg-clip-text text-transparent">
+            <div className="text-4xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-purple-700 via-purple-600 to-purple-700 bg-clip-text text-transparent">
               Ready to Deploy
             </div>
           </div>
-          <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+          <div className="max-w-3xl mx-auto mb-7">
+            <p className="text-md sm:text-lg text-gray-300 font-extralight leading-relaxed mx-auto max-w-2xl">
               Get a complete, production-ready video chat application with
               beautiful UI, robust features, and clean code. Perfect for
               developers, agencies, and businesses looking to integrate video
@@ -187,20 +187,20 @@ const VideoChat = () => {
       </div>
 
       {/* App Screenshots Showcase */}
-      <section className="py-20">
+      <section className="py-3">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl font-bold text-white mb-6">
               See What You're <span className="text-purple-600">Getting</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-lg font-extralight text-gray-300 max-w-2xl mx-auto">
               Beautiful, pixel-perfect interfaces designed for modern video
               communication
             </p>
           </div>
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pb-8 md:pb-12">
             <div>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+              <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
                 Our App
               </h1>
               <p className="text-sm text-gray-400 mt-2">
@@ -284,7 +284,7 @@ const VideoChat = () => {
                       {screenshot.features.map((feature, i) => (
                         <span
                           key={i}
-                          className="text-xs bg-purple-800 text-gray-300 px-2 py-1 rounded-lg border border-gray-700"
+                          className="text-xs bg-purple-800 font-extralight text-gray-300 px-2 py-1 rounded-lg border border-gray-700"
                         >
                           {feature}
                         </span>
@@ -305,10 +305,10 @@ const VideoChat = () => {
 
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl font-bold text-white mb-6">
               Core <span className="text-purple-800">Features</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-lg font-extralight text-gray-300 max-w-2xl mx-auto">
               Everything you need to launch your video chat application
             </p>
           </div>
@@ -348,19 +348,17 @@ const VideoChat = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="group relative bg-purple-950/10 border border-purple-800/40 rounded-xl p-6 
-                     hover:border-purple-500 hover:shadow-lg hover:shadow-purple-700/30 
+                className="group relative bg-purple-950/10 border-t-5 border border-purple-800/40 rounded-xl p-6 
+                     hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/20 
                      transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">
+                <h3 className="font-bold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400 text-sm">{feature.desc}</p>
-
-                {/* Glow effect on hover */}
+                <p className="text-gray-400 text-sm font-extralight">{feature.desc}</p>
                 <div
                   className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 
                           transition duration-500 bg-gradient-to-r from-purple-800/20 to-purple-800/20 blur-lg -z-10"
@@ -375,11 +373,11 @@ const VideoChat = () => {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl font-bold text-white mb-6">
               The Future of{" "}
               <span className="text-purple-600">Chat is Here</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-lg font-extralight text-gray-300 max-w-2xl mx-auto">
               We're pushing the boundaries of what's possible in conversational
               experiences. Here's what's coming next.
             </p>
@@ -434,8 +432,8 @@ const VideoChat = () => {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="group relative bg-purple-950/10 border border-purple-800/40 rounded-xl p-6 
-                     hover:border-purple-500 hover:shadow-lg hover:shadow-purple-700/30 
+                  className="group relative bg-purple-950/10 border-t-5 border border-purple-800/40 rounded-xl p-6 
+                     hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/20 
                      transition-all duration-300 transform hover:-translate-y-2"
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -447,7 +445,7 @@ const VideoChat = () => {
                     </span>
                   </div>
                   <h4 className="font-bold text-white mb-2">{feature.title}</h4>
-                  <p className="text-gray-300 text-sm">{feature.description}</p>
+                  <p className="text-gray-300 font-extralight text-sm">{feature.description}</p>
                   {/* Glow effect on hover */}
                   <div
                     className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 
@@ -504,10 +502,10 @@ const VideoChat = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-purple-900/30 via-purple-800/20 to-blue-900/30">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Launch Your Video Chat App?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-lg font-extralight text-gray-300 mb-8">
             Join hundreds of developers who've already built successful video
             chat applications with our code
           </p>

@@ -195,7 +195,7 @@ const ConceptPage = () => {
   ];
 
   return (
-    <div className="text-white bg-[#0a0a16] font-serif">
+    <div className="text-white bg-[#0a0a16] font-segoe">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-2">
         <div className="relative min-h-screen overflow-hidden">
@@ -205,25 +205,25 @@ const ConceptPage = () => {
               clipPath: "polygon(38% 0%, 62% 0%, 97% 100%, 3% 100%)",
             }}
           />
-          <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-18 pt-14 md:pt-22 text-center">
-            <div className="mb-8">
-              <div className="inline-flex items-center space-x-2 bg-purple-900/50 border border-purple-500/30 text-purple-200 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <Sparkles className="w-4 h-4" />
+          <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-18 pt-3 md:pt-3 text-center">
+            <div className="mb-3">
+              <div className="inline-flex items-center space-x-2 bg-purple-900/50 border border-purple-500/30 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <Sparkles className="w-4 h-4 text-purple-700" />
                 <span>
                   Built by Former FAANG Developers • 500,000+ Downloads
                 </span>
               </div>
             </div>
             <div className="max-w-5xl mx-auto mb-8">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-semibold font-bold text-white leading-tight mb-4">
-                Ready-to-Launch App Solutions
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-white tracking-tight mb-4">
+                Ready to Launch App Solutions
               </h1>
               <div className="text-4xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-700 via-purple-600 to-purple-700 bg-clip-text text-transparent">
                 For Every Industry
               </div>
             </div>
             <div className="max-w-3xl mx-auto mb-12">
-              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+              <p className="text-md sm:text-lg text-gray-300 font-extralight leading-relaxed">
                 Get professional, production-ready mobile apps for any industry.
                 Built by former FAANG developers with clean code, beautiful UI,
                 and enterprise-grade features.
@@ -233,10 +233,10 @@ const ConceptPage = () => {
               </p>
             </div>
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-5">
               <button
                 onClick={() => setCurrentPage("chat")}
-                className="bg-gradient-to-r from-purple-600 to-purple-900 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+                className="bg-gradient-to-r from-purple-600 to-purple-900 text-white px-8 py-4 rounded-full font-semibold text-md hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
               >
                 <MessageSquare className="w-5 h-5" />
                 <Link href={"/chat"}>View Dope Chat</Link>
@@ -244,7 +244,7 @@ const ConceptPage = () => {
               </button>
               <button
                 onClick={() => setCurrentPage("#")}
-                className="border text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+                className="border text-white px-8 py-4 rounded-full font-semibold text-md hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
               >
                 <AppWindow className="w-5 h-5" />
                 <Link href={"#modules"}>Explore Our Apps</Link>
@@ -254,52 +254,52 @@ const ConceptPage = () => {
           <div className="flex flex-wrap justify-center items-center gap-8 text-base font-medium">
             <div className="flex items-center space-x-2 group cursor-pointer">
               <Layers2 className="w-8 h-8 text-purple-400 group-hover:scale-125 transition-transform duration-300" />
-              <span className="text-gray-300 text-lg group-hover:text-purple-400 transition-colors duration-300">
+              <span className="text-white text-md group-hover:text-purple-400 transition-colors duration-300">
                 One platform, endless apps
               </span>
             </div>
 
             <div className="flex items-center space-x-2 group cursor-pointer">
               <Rocket className="w-8 h-8 text-purple-400 group-hover:scale-125 transition-transform duration-300" />
-              <span className="text-gray-300 text-lg group-hover:text-purple-400 transition-colors duration-300">
+              <span className="text-white text-md group-hover:text-purple-400 transition-colors duration-300">
                 Scalable & future-proof foundation
               </span>
             </div>
 
             <div className="flex items-center space-x-2 group cursor-pointer">
               <Users2 className="w-8 h-8 text-purple-400 group-hover:scale-125 transition-transform duration-300" />
-              <span className="text-gray-300 text-lg group-hover:text-purple-400 transition-colors duration-300">
+              <span className="text-white text-md group-hover:text-purple-400 transition-colors duration-300">
                 Built for real people, not just code
               </span>
             </div>
           </div>
         </div>
       </section>
-      <section className="py-24 bg-gradient-to-b from-transparent to-gray-900/20">
+      <section className="pt-10 md:pt-20 pb-12 bg-gradient-to-b from-transparent to-gray-900/20">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             Why Choose{" "}
             <span className="bg-gradient-to-r from-[#a855f7] to-[#7c3aed] bg-clip-text text-transparent">
               Our Apps?
             </span>
           </h2>
-          <p className="text-gray-300 text-xl md:text-2xl mb-16 max-w-3xl mx-auto">
+          <p className="text-gray-300 text-md md:text-lg mb-16 max-w-3xl font-extralight mx-auto">
             Get everything you need to launch successful apps across any
-            industry — ready to deploy, fully customizable, and built to scale
+            industry - ready to deploy, fully customizable, and built to scale
             to millions of users.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="group backdrop-blur-sm border border-gray-600/30 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 cursor-pointer relative overflow-hidden">
+            <div className="group backdrop-blur-sm border border-gray-600/30 border-t-5 rounded-3xl p-8 shadow-2xl hover:shadow-purple-700/20 hover:border-purple-700 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 cursor-pointer relative overflow-hidden">
               <div className="absolute inset-0 group-hover:from-purple-900/20 group-hover:to-blue-900/20 transition-all duration-500 rounded-3xl"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#7c3aed] to-[#a855f7] rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500">
+                <div className="w-12 h-12 bg-purple-700 from-[#7c3aed] to-[#a855f7] rounded-2xl flex items-center justify-center mb-6">
                   <Code className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-xl font-bold text-white mb-4 text-left">
                   Production-Ready Code
                 </h3>
-                <p className="text-gray-300 text-md leading-relaxed">
+                <p className="text-gray-300 text-sm font-extralight leading-relaxed text-left">
                   Get instant access to clean, well-documented source code.
                   Built by FAANG engineers with industry best practices and
                   scalable architecture.
@@ -307,16 +307,16 @@ const ConceptPage = () => {
               </div>
             </div>
 
-            <div className="group backdrop-blur-sm border border-gray-600/30 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 cursor-pointer relative overflow-hidden">
+            <div className="group backdrop-blur-sm border border-gray-600/30 border-t-5 rounded-3xl p-8 shadow-2xl hover:shadow-purple-700/20 hover:border-purple-700 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 cursor-pointer relative overflow-hidden">
               <div className="absolute inset-0 group-hover:from-purple-900/20 group-hover:to-blue-900/20 transition-all duration-500 rounded-3xl"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#7c3aed] to-[#a855f7] rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500">
+                <div className="w-12 h-12 bg-purple-700 from-[#7c3aed] to-[#a855f7] rounded-2xl flex items-center justify-center mb-6">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-xl font-bold text-white mb-4 text-left">
                   Launch in Days
                 </h3>
-                <p className="text-gray-300 text-md leading-relaxed">
+                <p className="text-gray-300 text-sm font-extralight  max-w-3xl leading-relaxed text-left">
                   Skip months of development. Our apps are ready to customize
                   and deploy, saving you time and allowing you to focus on your
                   business logic.
@@ -324,16 +324,16 @@ const ConceptPage = () => {
               </div>
             </div>
 
-            <div className="group backdrop-blur-sm border border-gray-600/30 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 cursor-pointer relative overflow-hidden">
+            <div className="group backdrop-blur-sm border border-gray-600/30 border-t-5 rounded-3xl p-8 shadow-2xl hover:shadow-purple-700/20 hover:border-purple-700 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 cursor-pointer relative overflow-hidden">
               <div className="absolute inset-0 group-hover:from-purple-900/20 group-hover:to-blue-900/20 transition-all duration-500 rounded-3xl"></div>
               <div className="relative z-10">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#7c3aed] to-[#a855f7] rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500">
+                <div className="w-12 h-12 bg-purple-700 from-[#7c3aed] to-[#a855f7] rounded-2xl flex items-center justify-center mb-6">
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-xl font-bold text-white mb-4 text-left">
                   Scale to Millions
                 </h3>
-                <p className="text-gray-300 text-md leading-relaxed">
+                <p className="text-gray-300 text-sm font-extralight leading-relaxed text-left">
                   Built for enterprise scale with optimized performance, robust
                   architecture, and proven ability to handle millions of users
                   from day one.
@@ -347,11 +347,11 @@ const ConceptPage = () => {
       {/* Modules Section */}
       <section id="modules" className="py-20 bg-[#0a0a16]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="text-4xl font-bold text-white mb-6">
               Modular <span className="text-purple-700">by Design</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-300 text-md md:text-lg mb-16 max-w-3xl font-extralight mx-auto">
               Each module is engineered to solve specific challenges. Mix and
               match to create your perfect communication ecosystem with
               continuous updates.
@@ -401,10 +401,10 @@ const ConceptPage = () => {
         </div>
       </section>
       <section className="text-center py-20 px-6">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-          Build Faster. Launch Smarter.
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6">
+          Build Faster. <span className="text-purple-700">Launch Smarter.</span>
         </h2>
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+        <p className="text-md md:text-lg font-extralight text-gray-300 max-w-3xl mx-auto mb-10">
           Our platform gives you ready-to-use modules for chat, video, social,
           and more — crafted with scalability and design in mind. Save weeks of
           development and focus on what makes your product truly unique.

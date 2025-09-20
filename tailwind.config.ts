@@ -6,8 +6,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      serif: ['"Times New Roman"', 'Times', 'serif'],
+      segoe: ['"Segoe UI"', 'Roboto', 'Arial', 'sans-serif'],
     },
   },
   plugins: [],

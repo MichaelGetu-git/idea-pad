@@ -6,23 +6,16 @@ import NavBar from "./Navbar";
 import Footer from "./Footer";
 import Script from "next/script";
 import PaddleScript from "./PaddleScript";
+import { Roboto_Slab } from "next/font/google";
 
+const robotoSlab = Roboto_Slab({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 import { Inter } from "next/font/google";
-
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "700", "900"], // choose weights you need
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -36,14 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className={`antialiased`}>
+      <body>
         <PaddleScript />
         <NavBar />
         {children}
