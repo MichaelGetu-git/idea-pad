@@ -1,4 +1,4 @@
-import { ArrowRight, Video, MessageSquare, Users, Zap, Shield, Clock, CheckCircle, Star, Smartphone, Monitor, Calendar, Sparkles, ShoppingCart, Briefcase, Code, Heart, TrendingUp, Building } from 'lucide-react';
+import { CheckCircle,  ShoppingCart,  Code, Heart, Building } from 'lucide-react';
 import { useState } from 'react';
 
 
