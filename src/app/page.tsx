@@ -28,111 +28,81 @@ const ConceptPage = () => {
 
   const modules = [
     {
-      emoji: "💬",
-      title: "Chat",
-      tagline: "Instant conversations without limits",
+      slug: "videochat",
+      emoji: "🎥",
+      title: "Video Chat",
+      tagline: "HD video calls with chat and screen share",
       description:
-        "Stay connected with seamless messaging and calling designed for modern communication.",
-      features: [
-        "Real-time sync",
-        "Group & private chats",
-        "Voice & video calls",
-        "Cross-device support",
-      ],
-      status: "In Development",
-      color: "orange",
-    },
-    {
-      emoji: "👤",
-      title: "User Management",
-      tagline: "Secure authentication and profiles",
-      description:
-        "Complete user account system with authentication, profile management, and security controls for your application.",
-      features: [
-        "Secure login/signup",
-        "Profile customization",
-        "Account settings",
-        "Privacy controls",
-      ],
+        "Production-ready video calling with messaging, screen share, and modern UI.",
+      features: ["HD Calls", "Realtime Chat", "Screen Share", "Profiles"],
       status: "Active",
-      color: "blue", 
-    },
-    {
-      emoji: "🏠",
-      title: "Real Estate",
-      tagline: "Find your next home or property",
-      description:
-        "Browse properties, connect with agents, and explore real estate opportunities with immersive tools.",
-      features: [
-        "Property search",
-        "Virtual tours",
-        "Agent connection",
-        "Saved favorites",
-      ],
-      status: "Comming Soon",
-      color: "green",
-    },
-    {
-      emoji: "👥",
-      title: "Social Network",
-      tagline: "A community built for everyone",
-      description:
-        "Connect, share, and engage with a social platform that adapts to your lifestyle.",
-      features: [
-        "User profiles",
-        "News feeds",
-        "Group creation",
-        "Content sharing",
-      ],
-      status: "Comming Soon",
-      color: "cyan",
-    },
-    {
-      emoji: "🛒",
-      title: "Ecommerce",
-      tagline: "Sell smarter, shop better",
-      description:
-        "Create stores, manage products, and enjoy secure transactions in a modern shopping experience.",
-      features: [
-        "Product catalogs",
-        "Secure payments",
-        "Cart & checkout",
-        "Customer reviews",
-      ],
-      status: "Comming Soon",
       color: "purple",
     },
     {
+      slug: "aichat",
+      emoji: "🤖",
+      title: "AI Chat",
+      tagline: "ChatGPT-powered assistant for your app",
+      description:
+        "Fully functional AI assistant with OpenAI integration and Firebase backend.",
+      features: ["GPT Responses", "Media Messages", "Push Notifications", "Profiles"],
+      status: "Active",
+      color: "blue",
+    },
+    {
+      slug: "chatapp",
+      emoji: "💬",
+      title: "Chat App",
+      tagline: "Realtime messaging for iOS & Android",
+      description:
+        "Private and group chat with media, notifications, and Firebase backend.",
+      features: ["Private Chat", "Group Chat", "Media", "Notifications"],
+      status: "Active",
+      color: "green",
+    },
+    {
+      slug: "dashboard",
+      emoji: "📊",
+      title: "Dashboard",
+      tagline: "Analytics, CRM, tasks — on mobile",
+      description:
+        "Business dashboard with charts, sales, customers, tasks and notifications.",
+      features: ["Charts", "Sales Feed", "CRM", "Tasks"],
+      status: "Coming Soon",
+      color: "cyan",
+    },
+    {
+      slug: "finance",
       emoji: "💰",
       title: "Finance",
-      tagline: "Smarter ways to manage money",
+      tagline: "Portfolio, banking & analytics",
       description:
-        "Track expenses, plan budgets, and make informed financial decisions with ease.",
-      features: [
-        "Expense tracking",
-        "Budget planning",
-        "Analytics",
-        "Secure accounts",
-      ],
-      status: "Comming Soon",
+        "Fintech app with investments, banking, charts, and alerts.",
+      features: ["Net Worth", "Portfolio", "Banking", "Alerts"],
+      status: "Coming Soon",
       color: "yellow",
     },
     {
-      emoji: "🍔",
-      title: "Food Delivery",
-      tagline: "Your favorite meals, delivered fast",
+      slug: "taxi",
+      emoji: "🚕",
+      title: "Taxi",
+      tagline: "Passenger & driver apps with maps",
       description:
-        "Browse menus, order with a tap, and get food delivered right to your door.",
-      features: [
-        "Restaurant search",
-        "Live tracking",
-        "Secure payments",
-        "Order history",
-      ],
-      status: "Comming Soon",
-      color: "red",
+        "Taxi booking, driver tracking, chat, payments and notifications.",
+      features: ["Booking", "Tracking", "Chat", "Payments"],
+      status: "Coming Soon",
+      color: "orange",
     },
   ];
+
+  const moduleImages: Record<string, string> = {
+    videochat: "/video-chat/video-chat.png",
+    aichat: "/ai-chat/ai-chat.png",
+    chatapp: "/chat/chat-app.png",
+    dashboard: "/dashboard/dashboard.png",
+    finance: "/finance/finance.png",
+    taxi: "/taxi/taxi.png",
+  };
 
   return (
     <div className="text-white bg-[#0a0a16] font-segoe">
@@ -174,14 +144,14 @@ const ConceptPage = () => {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-5">
-              <button
-                onClick={() => setCurrentPage("chat")}
+              <Link
+                href={"/modules/chatapp"}
                 className="bg-gradient-to-r from-purple-600 to-purple-900 text-white px-8 py-4 rounded-full font-semibold text-md hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
               >
                 <MessageSquare className="w-5 h-5" />
-                <Link href={"/chat"}>View Dope Chat</Link>
+                <span>View Dope Chat</span>
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
               <button
                 onClick={() => setCurrentPage("#")}
                 className="border text-white px-8 py-4 rounded-full font-semibold text-md hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
@@ -297,11 +267,11 @@ const ConceptPage = () => {
               continuous updates.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
             {modules.map((module, index) => (
-              <div
+              <Link
                 key={index}
-                onClick={() => setSelectedModule(module)}
+                href={`/modules/${module.slug}`}
                 className="group relative bg-purple-950/10 border border-purple-800/40 rounded-xl p-6 
                      hover:border-purple-500 hover:shadow-lg hover:shadow-purple-700/30 
                      transition-all duration-300 transform hover:-translate-y-2"
@@ -310,20 +280,14 @@ const ConceptPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-900/0 to-blue-900/0 group-hover:from-purple-900/10 group-hover:to-blue-900/10 transition-all duration-500 rounded-2xl"></div>
 
                 <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-3xl group-hover:scale-125 transition-transform duration-500 group-hover:rotate-12">
-                      {module.emoji}
-                    </div>
-                    <span
-                      className={`text-xs px-2 py-1 rounded-full font-medium transition-all duration-300 ${
-                        module.status === "Available"
-                          ? "bg-green-900/50 text-green-300 border border-green-500/30 group-hover:bg-green-800/70 group-hover:text-green-200"
-                          : "bg-blue-900/50 text-blue-300 border border-blue-500/30 group-hover:bg-blue-800/70 group-hover:text-blue-200"
-                      }`}
-                    >
-                      {module.status === "Available" ? "Live" : module.status}
-                    </span>
+                  <div className="-mx-6 -mt-6 mb-4 overflow-hidden rounded-t-xl">
+                    <img
+                      src={moduleImages[module.slug]}
+                      alt={`${module.title} preview`}
+                      className="w-full h-72 md:h-56 lg:h-56 xl:h-64 object-fit"
+                    />
                   </div>
+                  
                   <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-200 transition-colors duration-300">
                     {module.title}
                   </h3>
@@ -335,7 +299,7 @@ const ConceptPage = () => {
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-2 transition-transform duration-300" />
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

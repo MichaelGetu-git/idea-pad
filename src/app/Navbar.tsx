@@ -19,10 +19,10 @@ const NavBar = () => (
             Overview
           </Link>
           <Link
-            href={"/chat"}
+            href={"/modules/videochat"}
             className={`font-medium transition-colors chat text-white hover:text-purple-700`}
           >
-            Explore chat
+            Explore Video chat
           </Link>
         </div>
       </div>
